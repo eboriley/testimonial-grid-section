@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+  padding: 3.5rem 1.5rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin: 10px 0px;
+}
+
+p {
+  font-size: 0.9rem;
+}
+.section_two h1 {
+  font-size: 1.3rem;
+  margin: 0.7 0rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .App {
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    padding: 10rem 7rem;
+  }
+
+  .section_one {
+    grid-column: 1 / span 2;
+    /* grid-row: 1 / span 2; */
+  }
+
+  .section_two {
+    grid-column: 3 / span 1;
+  }
+
+  .section_four {
+    grid-column: 2 / span 2;
+  }
+
+  .section_five {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
